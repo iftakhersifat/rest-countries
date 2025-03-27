@@ -17,6 +17,7 @@
 .img{
     width: 350px;
     height: 200px;
+    border-radius: 4px;
 }
 .country-name{
     font-size: 35px;

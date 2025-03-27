@@ -12,7 +12,7 @@ const Countries = ({countriesPromise}) => {
         setVisitedCountry(countVisitedCountry);
     }
     return (
-        <div>
+        <div className='font'>
             <h1>Country List : {countries.length}</h1>
             <h3>Count Visited Country: {visitedCountry.length}</h3>
             <div className='visited'>
