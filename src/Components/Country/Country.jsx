@@ -15,7 +15,7 @@ const Country = ({ country }) => {
     }
 
     return (
-        <div className='country'>
+        <div className={`country ${visited && 'card-bg'}`}>
             <h1>{country.name.common}</h1>
             <img src={country.flags.png} alt="" />
             <h2>Capital: {country.capital}</h2>
