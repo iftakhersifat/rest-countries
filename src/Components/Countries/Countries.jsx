@@ -11,6 +11,12 @@ const Countries = ({countriesPromise}) => {
         const countVisitedCountry = [...visitedCountry, country];
         setVisitedCountry(countVisitedCountry);
     }
+
+    const [visitedFlags, setVisitedFlags] = useState([]);
+    const handelVisitedFlags = (country)=>{
+        const countFlags = [...visitedFlags, country];
+        setVisitedFlags(countFlags);
+    }
     return (
         <div className='font'>
             <h1>Country List : {countries.length}</h1>
@@ -20,11 +26,18 @@ const Countries = ({countriesPromise}) => {
                     visitedCountry.map(country => <ul>{country.name.common}</ul>)
                 }
             </ol>
+            <h3>Visited Flags : {visitedFlags.length}</h3>
+            <div>
+                {
+                    visitedFlags.map(flags=> <img src={flags}></img>)
+                }
+            </div>
             <div className='visited'>
             {
                 countries.map(country=> <Country
                      key={country.cca2}
                      handelVisitedCountry={handelVisitedCountry}
+                     handelVisitedFlags={handelVisitedFlags}
                      country={country}>
                      </Country>)
             }
