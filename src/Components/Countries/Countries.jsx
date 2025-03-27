@@ -15,6 +15,11 @@ const Countries = ({countriesPromise}) => {
         <div className='font'>
             <h1>Country List : {countries.length}</h1>
             <h3>Count Visited Country: {visitedCountry.length}</h3>
+            <ol>
+                {
+                    visitedCountry.map(country => <ul>{country.name.common}</ul>)
+                }
+            </ol>
             <div className='visited'>
             {
                 countries.map(country=> <Country
