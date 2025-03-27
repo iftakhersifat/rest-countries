@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Country = ({ country }) => {
     console.log(country);
 
+    const [visited, setVisited] =useState(false);
+
     const handelVisitButton =()=>{
-        alert("clicked")
+        setVisited(true);
     }
 
     return (
@@ -15,7 +17,9 @@ const Country = ({ country }) => {
             <h3>{country.independent ? "Yes" : "Not"} Independent Country</h3>
             <h4>Population: {country.population}</h4>
             <h4>Region: {country.region}</h4>
-            <button onClick={handelVisitButton}>Not Visit</button>
+            <button onClick={handelVisitButton}>{
+                visited ? "Visited" : "Not Visited"
+        }</button>
         </div>
     );
 };
