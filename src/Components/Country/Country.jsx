@@ -6,6 +6,8 @@ const Country = ({ country }) => {
         <div>
             <h1>{country.name.common}</h1>
             <img src={country.flags.png} alt="" />
+            <h3>Capital: {country.capital}</h3>
+            
         </div>
     );
 };
