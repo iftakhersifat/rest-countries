@@ -8,6 +8,7 @@ const Country = ({ country }) => {
             <img src={country.flags.png} alt="" />
             <h2>Capital: {country.capital}</h2>
             <h3>{country.independent ? "Yes" : "Not"} Independent Country</h3>
+            <h4>Population: {country.population}</h4>
             
         </div>
     );
