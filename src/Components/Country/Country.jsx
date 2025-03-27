@@ -16,8 +16,8 @@ const Country = ({ country }) => {
 
     return (
         <div className={`country ${visited && 'card-bg'}`}>
-            <h1>{country.name.common}</h1>
-            <img src={country.flags.png} alt="" />
+            <h1 className='country-name'>{country.name.common}</h1>
+            <img className='img' src={country.flags.png} alt="" />
             <h2>Capital: {country.capital}</h2>
             <h3>{country.independent ? "Yes" : "Not"} Independent Country</h3>
             <h4>Population: {country.population}</h4>
