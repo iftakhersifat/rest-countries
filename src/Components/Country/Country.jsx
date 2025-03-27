@@ -9,7 +9,7 @@ const Country = ({ country }) => {
             <h2>Capital: {country.capital}</h2>
             <h3>{country.independent ? "Yes" : "Not"} Independent Country</h3>
             <h4>Population: {country.population}</h4>
-            
+            <h4>Region: {country.region}</h4>
         </div>
     );
 };
