@@ -6,7 +6,11 @@ const Country = ({ country }) => {
     const [visited, setVisited] =useState(false);
 
     const handelVisitButton =()=>{
-        setVisited(true);
+        // default set up
+        // setVisited(true);
+
+        if(visited){ setVisited(false) }
+        else {setVisited(true) }
     }
 
     return (
@@ -19,7 +23,7 @@ const Country = ({ country }) => {
             <h4>Region: {country.region}</h4>
             <button onClick={handelVisitButton}>{
                 visited ? "Visited" : "Not Visited"
-        }</button>
+            }</button>
         </div>
     );
 };
