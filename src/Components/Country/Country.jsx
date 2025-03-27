@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Country.css'
 
 const Country = ({ country }) => {
     console.log(country);
@@ -21,7 +22,7 @@ const Country = ({ country }) => {
             <h3>{country.independent ? "Yes" : "Not"} Independent Country</h3>
             <h4>Population: {country.population}</h4>
             <h4>Region: {country.region}</h4>
-            <button onClick={handelVisitButton}>{
+            <button className='button' onClick={handelVisitButton}>{
                 visited ? "Visited" : "Not Visited"
             }</button>
         </div>
